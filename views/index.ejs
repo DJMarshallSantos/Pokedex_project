@@ -4,26 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Pokedex</title>
   </head>
 
   <body class="home-body">
     <header id="top-container">
       <h1 id="header">Pokédex</h1>
-      <img id="pokedex-logo" src="../img/Pokédex_logo.png" alt="pokédex logo" />
+      <img id="pokedex-logo" src="./img/Pokédex_logo.png" alt="pokédex logo" />
       <img
         id="pokeball-logo"
-        src="../img/pokeball-logo.png"
+        src="./img/pokeball-logo.png"
         alt="pokeball-logo"
       />
     </header>
     <nav class="menu">
       <div>
-        <a href="/home/">Home</a>
+        <a href="/">Home</a>
       </div>
       <div>
-        <a href="/cadastro/">Cadastro</a>
+        <a href="/cadastro">Cadastro</a>
       </div>
     </nav>
     <% if(message != "") {  %>
@@ -38,11 +38,11 @@
         <a href="/detalhes/<%= pokemon.id %>">
           <div class="pokemon-card" id="<%= pokemon.id %>">
             <div class="card-front">
-              <img src="../img/front-bg.png" id="front-bg" alt="" />
+              <img src="./img/front-bg.png" id="front-bg" alt="" />
               <div class="inner">
                 <div id="numero">
                   <h3><%= pokemon.numero %></h3>
-                  <img src="../img/card-logo.png" class="icon" alt="card-logo" />
+                  <img src="./img/card-logo.png" class="icon" alt="card-logo" />
                 </div>
               </div>
             </div>
@@ -63,6 +63,6 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
     </main>
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

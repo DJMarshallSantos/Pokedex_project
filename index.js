@@ -55,7 +55,7 @@ let message = "";
 
 // Rotas
 app.get("/home", (req, res) => {
-  res.render("index", { pokedex, pokemon, message, });
+  res.render("home", { pokedex, pokemon, message, });
 });
 
 app.get("/cadastro", (req, res) => {

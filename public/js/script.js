@@ -14,16 +14,20 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("pokemon-card");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  console.log(slides.length)
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  if (slides.length > 0) {
+    slides[slideIndex - 1].style.display = "block";
+  }
 }
 
 function displayImg() {
-  const show = document.getElementById("display-img");
+  let show = document.getElementById("display-img");
+  show.innerHTML = "";
   const imgUrl = document.getElementById("url").value;
   let img = document.createElement("img");
   img.src = imgUrl;
@@ -33,17 +37,31 @@ function displayImg() {
 const closeMessage = document.querySelector("#close");
 const message = document.querySelector("#message");
 
-closeMessage.addEventListener("click", function (){
-    message.style.display = "none"
-});
+if (closeMessage) {
+  closeMessage.addEventListener("click", function () {
+    message.style.display = "none";
+  });
+}
+
 
 setTimeout(() => {
+  if (message) {
     message.style.display = "none"
-}, 5000); 
+  }
+}, 5000);
 
 function remove(el) {
   const element = el;
   element.remove();
 }
+
+function displayImg() {
+  const show = document.getElementById("display-img");
+  const imgUrl = document.getElementById("url").value;
+  let img = document.createElement("img");
+  img.src = imgUrl;
+  show.appendChild(img);
+}
+console.log("loaded")
 
 

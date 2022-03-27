@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -93,7 +93,4 @@ app.post("/editar/:id", (req, res) => {
 });
 
 app.listen(port, () =>
-  console.log(
-    `O Servidor Pokedex está rodando na http://localhost:${port}/home/.`
-  )
-);
+  console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/home/.`));
